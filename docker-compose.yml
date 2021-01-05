@@ -4,7 +4,7 @@ services:
   wp:
     image: wordpress:latest # https://hub.docker.com/_/wordpress/
     ports:
-      - 80:80 # change ip if required
+      - 8080:80 # 8080 external port for compatibility with reverse proxy webserver
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./wp-app:/var/www/html # Full wordpress project
@@ -28,7 +28,7 @@ services:
       - wp
 
   db:
-    image: mysql:latest # https://hub.docker.com/_/mysql/ - or mariadb https://hub.docker.com/_/mariadb
+    image: mariadb:latest # mariadb for arm/Rasp.-Pi compatibility https://hub.docker.com/_/mariadb
     ports:
       - ${IP}:3306:3306 # change ip if required
     command: [
