@@ -5,8 +5,7 @@ services:
     image: wordpress:latest # https://hub.docker.com/_/wordpress/
     ports:
       - 8080:80 # 8080 external port for compatibility with reverse proxy webserver
-    restart_policy:
-      condition: on-failure
+    restart: unless-stopped
     volumes:
       - ./config/php.conf.ini:/usr/local/etc/php/conf.d/conf.ini
       - ./wp-app:/var/www/html # Full wordpress project
@@ -41,8 +40,7 @@ services:
     volumes:
       - ./wp-data:/docker-entrypoint-initdb.d
       - db_data:/var/lib/mysql
-    restart_policy:
-      condition: on-failure
+    restart: unless-stopped
     environment:
       MYSQL_DATABASE: "${DB_NAME}"
       MYSQL_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
