@@ -1,6 +1,8 @@
-# WPDC - Wordpress Docker Compose
+#### Wordpress development with Docker and Docker Compose for Raspberry Pi
 
-#### Easy Wordpress development with Docker and Docker Compose
+# Wordpress Docker Compose based of chrisbmatthews https://github.com/chrisbmatthews/wordpress-docker-compose
+
+This project has made small changes to chrisbmatthews work, to make wordpress run on a Raspberry Pi. It's tested to run on Raspberry Pi 3 & 4.
 
 ## Starting a new project
 
