@@ -1,3 +1,5 @@
+No longer actively maintained!!!
+
 # Wordpress development with Docker and Docker Compose for Raspberry Pi
 
 ### Wordpress Docker Compose based of chrisbmatthews https://github.com/chrisbmatthews/wordpress-docker-compose
